@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <schema targetNamespace="urn:iMesImage"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="urn:iMesImage"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="unqualified"
+    attributeFormDefault="unqualified">
+    <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    <!-- operation request element -->
+    <element name="uploadData">
+      <complexType>
+          <sequence>
+            <element name="macCode" type="xsd:string" minOccurs="0" maxOccurs="1"/><!-- ns__uploadData::macCode -->
+            <element name="wipEntityId" type="xsd:string" minOccurs="0" maxOccurs="1"/><!-- ns__uploadData::wipEntityId -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="uploadDataResponse">
+      <complexType>
+          <sequence>
+            <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1"/><!-- ns__uploadData::result -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation request element -->
+    <element name="DownloadData">
+      <complexType>
+          <sequence>
+            <element name="data" type="xsd:string" minOccurs="0" maxOccurs="1"/><!-- ns__DownloadData::data -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="DownloadDataResponse">
+      <complexType>
+          <sequence>
+            <element name="value" type="xsd:string" minOccurs="0" maxOccurs="1"/><!-- ns__DownloadData::value -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation request element -->
+    <element name="test1">
+      <complexType>
+          <sequence>
+            <element name="input" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__test1::input -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="test1Response">
+      <complexType>
+          <sequence>
+            <element name="result" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__test1::result -->
+          </sequence>
+      </complexType>
+    </element>
+  </schema>
+
